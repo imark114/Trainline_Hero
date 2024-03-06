@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href=" {% static "css/index.css" %} "> {% endblock css %} 
+{% block content %}
+
+<div class="row mt-5 align-items-center">
+    <div class="col-md-6">
+        <div class="banner_texts">
+            <h1>Welcome to <br> Trainline Hero</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus debitis sit<br>  voluptatum quas, pariatur doloremque voluptas repudiandae vero asperiores.</p>
+            <a href=" {% url "filter_train" %} ">Filter Your Destiny</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img class="banner_img" src=" {% static "images/station2.jpg" %} " alt="">
+    </div>
+</div>
+
+{% endblock content %}

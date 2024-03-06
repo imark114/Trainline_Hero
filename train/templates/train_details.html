@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block head_title %} {{type}} {% endblock head_title %}
+{% block css %} <link rel="stylesheet" href=" {% static "css/train_details.css" %} "> 
+{% endblock css %}
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mt-5">
+    <div class="col-md-4">
+        <img class="img-fluid" src="{{train.image.url}}" alt="">
+    </div>
+    <div class="col-md-6">
+        <h2 class="detail_heading">Train Details:</h2>
+        <div class="train_detail_section">
+            <h5>Name: {{train.name}}</h5>
+            <h6>Start From: {{train.source_station.name}} - Going To: {{train.destination_station.name}}</h6>
+            <p><strong>Total Setas:</strong> {{train.total_seats}}</p>
+            <p><strong>Avilable Setas:</strong> {{train.available_seats}}</p>
+            <p><strong>Price:</strong> {{train.ticket_price}}BDT</p>
+            <a href=" {% url "book_seat" train.id %} ">Book Seat</a>
+        </div>
+    </div>
+</div>
+
+<div class="comment_section" style="width:80%; margin:auto;" >
+    <div class="card m-2">
+        <h5 class="p-3">Total Comments : {{comments | length}}</h5>
+        {% for comment in comments %}
+      <div class="card-body border m-2">
+            <p><b>{{comment.name}}</b> {{comment.created_on}}</p>
+            <p>{{comment.body}}</p>
+        </div>
+        {% endfor %}
+    </div>
+   {% if user.is_authenticated %}
+   <div class="card m-2">
+    <div class="card-body">
+        <form method="post">
+            <h1>Add Comment</h1>
+            {% csrf_token %}
+            {{comment_form | crispy}}
+            <button class="btn btn-warning">Submit</button>
+    </div>
+</div>
+   {% endif %}
+ </div>
+
+{% endblock content %}

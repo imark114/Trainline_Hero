@@ -1,0 +1,25 @@
+.banner_img{
+    height: 800px;
+    width: 100%;
+    border-radius: 10px;
+}
+.banner_texts{
+    width: 80%;
+}
+.banner_texts h1{
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin: 25px 0;
+    font-weight: 800;
+    text-shadow: 3px 3px 9px gray;
+}
+.banner_texts a{
+    background: #f7be56;
+    padding: 15px 15px;
+    margin-top: 13px;
+    display: inline-block;
+    color: black;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 600;
+}

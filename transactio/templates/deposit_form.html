@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head_title %}{{type}}{% endblock head_title %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+    <div class="d-flex flex-column w-75 m-auto gap-2">
+        <div class="form_section">
+            <form method="POST" style="width:100%;" class="mt-5 shadow p-4 rounded">
+                {% csrf_token %}
+                {{form | crispy}}
+                <input class="btn btn-info fs-5 text-white" type="submit" value="{{type}}">
+            </form>
+        </div>
+        <div class="imag_section">
+            <img class="img-fluid" src=" {% static "images/dpst.svg" %} " alt="#">
+        </div>
+    </div>
+{% endblock content %}

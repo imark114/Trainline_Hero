@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="filter_section">
+    <h3 class="text-center mb-4">Filter Train by Your Destiny</h3>
+    <form method="GET" class="d-flex flex-column gap-2">
+ <div class="d-flex justify-content-around">
+  <div>
+    <label class="slct_lbl" for="source">From:</label>
+    <select id="source" name="source">
+        {% for src in source %}
+        <option value="{{src.id}}">{{src.name}}</option>
+        {% endfor %}
+    </select>
+  </div>
+<div>
+    <label class="slct_lbl" for="destination">To:</label>
+<select id="destination" name="destination">
+    {% for dst in destination %}
+    <option value="{{dst.id}}">{{dst.name}}</option>
+    {% endfor %}
+</select>
+</div>
+ </div>
+    <input class="filter_btn" type="submit" value="Search">
+    </form>
+</div>
+
+
+<div class="d-flex flex-wrap justify-content-around mt-5">
+    {% for train in trains %}
+        <div class="train_card">
+            <img src=" {{train.image.url}} " alt="#">
+            <h3>{{train.name}}</h3>
+            <p><strong class="fst-italic" >From:</strong> {{train.source_station.name}} - <span> <strong class="fst-italic" >To:</strong> </span> {{train.destination_station.name}} </p>
+            <p><strong>Ticket Price:</strong>{{train.ticket_price}} BDT</p>
+            <a href=" {% url "train_details" train.id %} ">View Details</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}

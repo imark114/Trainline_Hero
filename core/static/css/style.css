@@ -1,0 +1,97 @@
+
+body{
+    width: 80vw;
+    margin: 0 auto !important;
+    background-color: #333131 !important;
+    color: white !important;
+}
+.nav_container{
+    background-color: rgb(47 45 45);
+    border-radius: 8px;
+}
+.logo_section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo_section img{
+    height: 75px;
+}
+li{
+    list-style: none;
+}
+.menu_item_section a{
+    color: white;
+}
+a{
+    text-decoration: none !important;
+}
+.user_section a{
+    padding: 8px 12px;
+    color: white;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.signup{
+    background-color: #2196F3;
+}
+.login{
+    background-color: #dc8744;
+}
+.form-text ul li{
+    color: white;
+}
+.train_card{
+    height: 550px;
+    background-color: #3a3636;
+    width: 500px;
+    padding: 30px 22px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 15px #4f4d4d;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+.train_card img{
+    height: 350px;
+    width: 100%;
+}
+.train_card a{
+    padding: 10px 15px;
+    color: black;
+    border-radius: 5px;
+    background-color: #f7be56;
+
+}
+
+.filter_section{
+    width: 40%;
+    margin: 50px auto;
+}
+.filter_section h3{
+    font-size: 35px;
+    font-weight: 700;
+    font-style: italic;
+}
+.slct_lbl{
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#source, #destination{
+    border: none;
+    padding: 5px 13px;
+}
+.filter_btn{
+    width: 45%;
+    margin: 20px auto;
+    border: none;
+    padding: 15px 0;
+    background-color: #f7be56;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: uppercase;
+}

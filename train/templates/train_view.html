@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block head_title %}All Trains{% endblock head_title %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-around mt-5">
+    {% for train in trains %}
+        <div class="train_card mb-4">
+            <img src=" {{train.image.url}} " alt="#">
+            <h3>{{train.name}}</h3>
+            <p><strong class="fst-italic" >From:</strong> {{train.source_station.name}} - <span> <strong class="fst-italic" >To:</strong> </span> {{train.destination_station.name}} </p>
+            <p><strong>Ticket Price:</strong>{{train.ticket_price}} BDT</p>
+            <a href=" {% url "train_details" train.id %} ">View Details</a>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
