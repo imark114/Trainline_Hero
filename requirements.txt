@@ -28,4 +28,4 @@ pytz
 soupsieve
 sqlparse
 tzdata
-virtualen
+virtualenv
