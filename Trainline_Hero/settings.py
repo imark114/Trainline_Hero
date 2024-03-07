@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-^p_*0e%%@tk(-fhr-8-ba&0ytsw^ld!d3qdq8lj1v^b_z3icpo
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = ['https://trainline-hero-1.onrender.com','https://*.127.0.0.1']
 
 # Application definition
 
