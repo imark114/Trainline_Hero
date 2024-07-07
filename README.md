@@ -12,3 +12,5 @@ Online train ticket booking management system that enables users to purchase tic
 - Django Template Language
 - CSS
 - Bootstrap
+## Screenshots
+![train](https://github.com/imark114/Trainline_Hero/assets/129614957/bb857e70-2bf6-4e82-9bbc-be2a05033531)
